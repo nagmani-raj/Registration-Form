@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+            <img id="p" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIL2LspP2hL392lkUnlu2H1Ry4_BjFnYBamw&s">
+        <h1 style="margin-left:550px;">Registration Form 
+        </h1>
+        <h2 style ="margin-left: 450px;"><b><i>Goverment Engineering College Kishanganj</i></b></h2>
+    </header>
+    <div style="position: fixed;
+            bottom: 350px;
+            left: 350px;
+            z-index: 1000;
+            font-size:100px;
+            color: rgb(20, 18, 18);
+            transform:rotate(-30deg);
+            opacity: 0.2;">
+        NAGMANI RAJ
+    </div>
+    
+    <ol>
+        <li>
+            <h3><b><i>Personal Dtails</i></b></h3>
+        </li>
+        <hr>
+    <ul>
+    <ul>
+        <li><b>Name: </b><input type="text" style="text-transform: uppercase;" placeholder="Enter Name"></li>
+        <br>
+        <li><b>Roll No.: </b><input type="Number" placeholder="Enter Roll No. "></li>
+        <br>
+        <li><b>D.O.B.: </b><input type="date"></li>
+        <br>
+        <li><b>Gender </b><label for="101">
+            <input type="radio" value="Male" name="Gender" id="101" > Male
+        </label>
+        <label for="102">
+            <input type="radio" value="Female" name="Gender" id="102" > Female
+        </label>
+        <label for="103">
+            <input type="radio" value="Other" name="Gender" id="103" > Other
+        </level></li>
+    </ul></ul>
+        <li>
+            <h3><b><i>Academic Record </i></b></h3>
+        </li>
+        <hr>
+        <table>
+            <tr>
+              <th>Name of class</th>
+              <th>Name of Board</th>
+              <th>Passing Year</th>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><select name="board">
+                <option value="bihar board">Select</option>
+                <option value="bihar board">B.S.E.B.</option>
+                <option value="cbse board">C.B.S.E.</option>
+            </select></td>
+              <td><input type="date"></td>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><select name="board">
+                <option value="bihar board">Select</option>
+                <option value="bihar board">B.S.E.B.</option>
+                <option value="cbse board">C.B.S.E.</option>
+            </select></td>
+              <td><input type="date"></td>
+            </tr>
+            <tr>
+              <td><input type="text"></td>
+              <td><select name="board">
+                <option value="bihar board">Select</option>
+                <option value="bihar board">B.S.E.B.</option>
+                <option value="cbse board">C.B.S.E.</option>
+            </select></td>
+              <td><input type="date"></td>
+            </tr>
+            </tr>
+        </table>
+        <li><h3><b><i>Choose Subject </i></b></h3></li><hr>
+        <label for="id1">
+            <input type="checkbox" value="Math" name="class" id="id1">Math
+        </label> <br> 
+        <label for="id2">
+            <input type="checkbox" value="Physics" name="class" id="id2">Physics
+        </label><br>
+        <label for="id3">
+            <input type="checkbox" value="Chemistry" name="class" id="id3">Chemistry
+        </label>  <br>
+        <label for="id4">
+            <input type="checkbox" value="Biology" name="class" id="id4">Biology
+        </label>
+        <li><b><i><h3>Personal Image Upload </h3></i></b></li>
+        <hr>
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <form>
+                <label for="imageUpload">Choose an image:</label><br><br>
+                <input type="file" id="imageUpload" accept="image/*">
+            </form>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section">
+            <h4><u>Uploaded Image Preview:</u></h4>
+            <img id="preview" src="#" alt="Image Preview">
+        </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('imageUpload');
+        const previewImage = document.getElementById('preview');
+
+        // Event listener for file input
+        imageInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImage.style.display = 'block'; // Show the image
+                    previewImage.src = e.target.result; // Set image source
+                };
+                reader.readAsDataURL(file); // Read file as a data URL
+            } else {
+                previewImage.style.display = 'none'; // Hide if no file is selected
+            }
+        });
+    </script>
+    </ol>
+    <input id="n" type="Submit" value="Submit">
+</body>
+</html>
